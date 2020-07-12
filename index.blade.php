@@ -28,8 +28,8 @@
 					</td>-->
 					<td>{{ $pessoas->id }}</td>
 					<td>{{ $pessoas->name }}</td>
-					<td>{{ $pessoas->cpf_number}}</td>
-					<td>{{ $pessoas->status}}</td>
+					<td>{{ $pessoas->number_cpf}}</td>
+					<td>{{ $pessoas->situacao_status}}</td>
 					<!-- <td>{{ $pessoas->acoes }}</td> -->
 					<td>
 						<form action="{{ route('pessoas.destroy', $pessoas) }}" method="post">
@@ -37,6 +37,7 @@
 							@csrf
 							<div class="btn-group btn-group-xs" role="group" aria-label="Ações">
 								<a class="btn btn-primary" href="{{ route('pessoas.edit', $pessoas) }}" role="button">Editar</a>
+								<!-- foi criado o botão visualizar, é preciso atribuir todo botstrap semelhante ao editar e deletar -->
 								<a class="btn btn-primary" href="{{ route('pessoas.visualizar', $pessoas) }}" role="button">Visualizar</a>
 								<button class="btn btn-danger" type="submit">Deletar</button>
 							</div>
